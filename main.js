@@ -123,8 +123,13 @@ factorial.addEventListener('click', function() {
   let v = screen.innerHTML;
   v = eval(v);
   result = 1;
-  for (var i = 1; i <= v; i++) {
-    result *= i
+  if (v > 0){
+      for (var i = 1; i <= v; i++) {
+      result *= i
+      }
+  }
+  else {
+    result = `error`
   }
   screen.innerHTML = `${result}`
 });
